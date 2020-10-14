@@ -1,0 +1,24 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar{
+  height: 85vh;
+  width: 15vw;
+  background-color: black;
+}
+.main-window{
+  position: absolute;
+  top:0;
+  left: 15vw;
+  width:85vw;
+  height:85vh;
+  background-color: #141922;
+}
+.music-player{
+width:100vw;
+height:15vh;
+background-color:#282828;
+}
