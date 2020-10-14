@@ -15,12 +15,16 @@
 
 body{
   font-family: "CircularSpotifyTxT-Black";
-  font-size: 12px;
+  font-size: 16px;
 }
 
 a{
   text-decoration: none;
   color:inherit;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #fff;
 }
 
 main{
@@ -65,23 +69,24 @@ main::after{
 .sidebar-header{
   height: calc(100% - 80px);
   width: 100%;
-  min-height: 400px;
+
+  min-height: 500px;
 }
 
 .logo-item{
   padding-top:20px;
-  height:80px;
   padding-left:10px;
-  margin-bottom:20px;
 }
 
 .logo-item img{
   width:150px;
 }
 
+.navbar-home {
+  margin: 30px 0;
+}
 
-
-.navbar-home > ul > li{
+.navbar-home > ul > li, .playlist-list > ul > li{
   padding-left:10px;
   height:30px;
   box-sizing: border-box;
@@ -98,7 +103,7 @@ main::after{
 }
 
 
-.active, .navbar-home > ul >li:hover{
+.active, .navbar-home > ul >li:hover , .playlist-list > ul > li:hover{
   color:#fff;
 }
 
@@ -107,20 +112,64 @@ main::after{
   border-left: 3px solid green;
 }
 
+.sidebar-playlist{
+  margin: 0 15px;
+}
+
+.create-playlist{
+  margin:10px 0;
+  height:40px;
+
+}
+div.add{
+  display:inline-block;
+  height:100%;
+  width: 40px;
+  background-color: gray;
+  color:black;
+  font-size:40px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.create-playlist:hover{
+  color: #fff;
+}
+
+.create-playlist:hover >a > div.add{
+  background-color: #fff !important;
+}
+
+div.playlist{
+  overflow-y: auto;
+  min-height: 400px;
+}
+
+nav.playlist-list > ul{
+  list-style: none;
+}
+
+nav.playlist-list > ul >li{
+  margin: 10px 0;
+}
+
+nav.playlist-list > ul > li:first-child{
+  margin-top:30px;
+}
 
 .sidebar-footer{
   height:80px;
   bottom:0;
   margin:0 15px;
-
 }
 
 .sidebar-footer hr{
   border:1px solid gray;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .download-app{
+  font-size:0.8rem;
 }
 
 .download-app img{
