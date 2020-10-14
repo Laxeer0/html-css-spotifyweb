@@ -1,10 +1,10 @@
 @font-face {font-family: "CircularSpotifyTxT-Black";
-  src: url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.eot"); /* IE9*/
-  src: url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.woff2") format("woff2"), /* chrome、firefox */
-  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.woff") format("woff"), /* chrome、firefox */
-  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.svg#CircularSpotifyTxT-Black") format("svg"); /* iOS 4.1- */
+  src: url("../fonts/spotify.eot"); /* IE9*/
+  src: url("../fonts/spotify.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/spotify.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/spotify.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/spotify.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/spotify.svg#CircularSpotifyTxT-Black") format("svg"); /* iOS 4.1- */
 }
 
 *{
@@ -16,6 +16,11 @@
 body{
   font-family: "CircularSpotifyTxT-Black";
   font-size: 12px;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
 }
 
 main{
@@ -55,39 +60,82 @@ main::after{
   height:100px;
   background-color:#282828;
 }
+
+/*Sidebar Style*/
+.sidebar-header{
+  height: calc(100% - 80px);
+  width: 100%;
+  min-height: 400px;
+}
+
 .logo-item{
   padding-top:20px;
   height:80px;
-
   padding-left:10px;
+  margin-bottom:20px;
 }
 
 .logo-item img{
   width:150px;
 }
 
-.navbar-sidebar > ul > li{
+
+
+.navbar-home > ul > li{
   padding-left:10px;
   height:30px;
   box-sizing: border-box;
   font-size: 0.9rem;
 }
 
-.navbar-sidebar > ul >li:nth-child(2){
+.navbar-home > ul >li:nth-child(2){
   margin:10px 0;
 }
 
-.navbar-sidebar > ul > li > img{
+.navbar-home > ul > li > a > img{
   height:100%;
   vertical-align: middle;
 }
 
 
-.active, .navbar-sidebar > ul >li:hover{
+.active, .navbar-home > ul >li:hover{
   color:#fff;
 }
 
 .active{
   padding-left:7px !important;
   border-left: 3px solid green;
+}
+
+
+.sidebar-footer{
+  height:80px;
+  bottom:0;
+  margin:0 15px;
+
+}
+
+.sidebar-footer hr{
+  border:1px solid gray;
+  margin: 5px 0;
+}
+
+.download-app{
+}
+
+.download-app img{
+  height:20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.user-profile{
+  color:#fff;
+  font-size: 1rem;
+}
+
+.user-profile img{
+  height:20px;
+  vertical-align: middle;
+  margin-right: 5px;
 }
