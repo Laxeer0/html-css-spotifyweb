@@ -1,24 +1,93 @@
+@font-face {font-family: "CircularSpotifyTxT-Black";
+  src: url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.eot"); /* IE9*/
+  src: url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/01173b246d9d9ea808ea75a26b3b61bb.svg#CircularSpotifyTxT-Black") format("svg"); /* iOS 4.1- */
+}
+
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body{
+  font-family: "CircularSpotifyTxT-Black";
+  font-size: 12px;
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .sidebar{
-  height: 85vh;
-  width: 15vw;
+  float:left;
+  width: 200px;
+  height: calc(100% - 100px);
   background-color: black;
+  color: gray;
 }
+
 .main-window{
-  position: absolute;
-  top:0;
-  left: 15vw;
-  width:85vw;
-  height:85vh;
+  float: left;
+  width:calc(100% - 200px);
+  height: calc(100% - 100px);
   background-color: #141922;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+
 .music-player{
-width:100vw;
-height:15vh;
-background-color:#282828;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width:100vw;
+  height:100px;
+  background-color:#282828;
+}
+.logo-item{
+  padding-top:20px;
+  height:80px;
+
+  padding-left:10px;
+}
+
+.logo-item img{
+  width:150px;
+}
+
+.navbar-sidebar > ul > li{
+  padding-left:10px;
+  height:30px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.navbar-sidebar > ul >li:nth-child(2){
+  margin:10px 0;
+}
+
+.navbar-sidebar > ul > li > img{
+  height:100%;
+  vertical-align: middle;
+}
+
+
+.active, .navbar-sidebar > ul >li:hover{
+  color:#fff;
+}
+
+.active{
+  padding-left:7px !important;
+  border-left: 3px solid green;
 }
